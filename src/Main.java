@@ -2,14 +2,19 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        EstoqueProduto estoqueProduto = new EstoqueProduto();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        estoqueProduto.exibirProduto();
+
+        estoqueProduto.adicionarProduto(1L, "Produto 1", 10, 6);
+        estoqueProduto.adicionarProduto(3L, "Produto 2", 12, 5);
+        estoqueProduto.adicionarProduto(2L, "Produto 3", 5, 12);
+        estoqueProduto.adicionarProduto(4L, "Produto 4", 10, 2);
+
+        estoqueProduto.exibirProduto();
+
+        System.out.println("O valor total do estoque é de R$: "+estoqueProduto.valorTotalEstoque());
+        System.out.println("O produto mais caro é o " + estoqueProduto.obterProdutoMaisCaro());
+
     }
 }
