@@ -30,9 +30,24 @@ public class EstoqueProduto {
             for (Produto p : estoqueProduto.values()){
                 if( p.getPreco() > maiorPreco ){
                     produtoMaisCaro = p;
+                    maiorPreco = p.getPreco();
                 }
             }
         }
         return produtoMaisCaro;
     }
+    public Produto obterProdutoMaisBarato (){
+        Produto produtoMaisBarato = null;
+        double menorPreco = Double.MAX_VALUE;
+        if (!estoqueProduto.isEmpty()){
+            for (Produto p : estoqueProduto.values()){
+                if( p.getPreco() < menorPreco ){
+                    produtoMaisBarato = p;
+                    menorPreco = p.getPreco();
+                }
+            }
+        }
+        return produtoMaisBarato;
+    }
+
 }

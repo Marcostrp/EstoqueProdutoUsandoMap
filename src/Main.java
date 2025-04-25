@@ -15,6 +15,7 @@ public class Main {
 
         System.out.println("O valor total do estoque é de R$: "+estoqueProduto.valorTotalEstoque());
         System.out.println("O produto mais caro é o " + estoqueProduto.obterProdutoMaisCaro());
+        System.out.println("O produto mais barato é o " + estoqueProduto.obterProdutoMaisBarato());
 
     }
 }
